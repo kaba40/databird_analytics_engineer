@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'airbnb_data_analysis'
+name: 'local_bike_data_analysis'
 version: '1.0.0'
 config-version: 2
 
@@ -36,7 +36,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  airbnb_data_analysis:
-    # Applies to all files under models/example/
-    example:
-      +materialized: table
+  local_bike_data_analysis:
+    # Applies to all files under models/staging/
+    staging:
+      +materialized: view
+      schema: stg_local_bike
