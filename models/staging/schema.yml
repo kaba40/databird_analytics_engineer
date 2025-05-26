@@ -2,19 +2,19 @@
 version: 2
 
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
+    - name: stg_local_bike_brands
+      description: "This table contains the local bike brands name"
       columns:
-          - name: id
+          - name: brand_id
             description: "The primary key for this table"
             tests:
                 - unique
                 - not_null
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
+    - name: stg_local_bike_categories
+      description: "This table contains the local bike categories name"
       columns:
-          - name: id
+          - name: category_id
             description: "The primary key for this table"
             tests:
                 - unique
