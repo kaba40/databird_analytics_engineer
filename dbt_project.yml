@@ -41,3 +41,6 @@ models:
     staging:
       +materialized: view
       schema: stg_local_bike
+    intermediate:
+      +materialized: view
+      schema: int_local_bike
