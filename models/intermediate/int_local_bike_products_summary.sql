@@ -6,9 +6,7 @@ SELECT
   product.brand_id,
   brand.brand_name,
   product.model_year,
-  product.list_price,
-  stock.store_id,
-  stock.quantity as stock_quantity
+  product.list_price
 FROM {{ref("stg_products")}} product
 LEFT JOIN {{ref("stg_categories")}} category
 ON 
@@ -18,7 +16,3 @@ LEFT JOIN {{ref("stg_brands")}} brand
 ON
   1 = 1
   AND product.brand_id = brand.brand_id
-LEFT JOIN {{ref("stg_stocks")}} stock
-ON 
-  1 = 1
-  AND stock.product_id = product.product_id
