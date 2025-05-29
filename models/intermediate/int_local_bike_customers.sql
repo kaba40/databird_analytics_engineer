@@ -2,6 +2,7 @@ select
   orders.customer_id,
   orders.store_id,
   orders.staff_id,
+  orders.order_creation_date,
   sum(orders.total_orders) as customer_total_orders,
   sum(orders.total_order_amount) as customer_total_order_spent,
   sum(orders.total_items) as customer_total_item_ordered,
@@ -16,4 +17,5 @@ group by
   orders.customer_id,
   orders.store_id,
   orders.staff_id,
+  orders.order_creation_date,
   product.product_id
