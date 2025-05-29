@@ -4,7 +4,7 @@ select
   orders.staff_id,
   sum(orders.total_orders) as customer_total_orders,
   sum(orders.total_order_amount) as customer_total_order_spent,
-  sum(orders.total_quantity) as customer_total_item_ordered,
+  sum(orders.total_items) as customer_total_item_ordered,
   sum(orders.total_distinct_items) as customer_total_distinct_items,
   product.product_id as customer_favorite_product
 from {{ref("int_local_bike_orders_aggregated")}} orders
