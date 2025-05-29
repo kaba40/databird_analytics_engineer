@@ -1,4 +1,4 @@
-
+-- to remove may be later
 select 
   order_tab.store_id,
   order_tab.staff_id,
@@ -16,7 +16,7 @@ select
   user_tab.city as customer_city,
   user_tab.state as customer_state,
   coalesce(order_item.total_order_amount, 0) as total_order_amount,
-  coalesce(order_item.total_quantity, 0) as total_items,
+  coalesce(order_item.total_items, 0) as total_items,
   coalesce(order_item.total_distinct_items, 0) as total_distinct_items
 from {{ref("int_local_bike_orders_summary")}} as order_tab
 left join {{ref("int_local_bike_orders_aggregated")}} as order_item on order_tab.order_id = order_item.order_id
