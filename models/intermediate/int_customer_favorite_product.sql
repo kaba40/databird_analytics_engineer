@@ -3,7 +3,7 @@ SELECT
     product_id,
     store_id,
     ROW_NUMBER() OVER (
-    PARTITION BY customer_id
+    PARTITION BY store_id, customer_id
     ORDER BY SUM(quantity) DESC
     ) AS rn
 FROM {{ref("int_local_bike_orders_summary")}}
