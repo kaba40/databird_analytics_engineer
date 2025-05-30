@@ -29,31 +29,7 @@ Note that some data are not complete. This situation limits our ability to perfo
 
 The transformation logic is implemented using dbt models organized in the following structure:
 
-models/
-├── staging/
-│ ├── stg_brands.sql
-│ ├── stg_categories.sql
-│ ├── stg_customers.sql
-│ ├── stg_order_items.sql
-│ ├── stg_orders.sql
-│ ├── stg_products.sql
-│ ├── stg_staffs.sql
-│ ├── stg_stocks.sql
-│ └── stg_stores.sql
-├── intermediate/
-│ ├── int_local_bike_favorite_product.sql
-│ ├── int_local_bike_customers.sql
-│ ├── int_local_bike_orders_aggregated.sql
-│ ├── int_local_bike_orders_summary.sql
-│ ├── int_local_bike_products_aggregated.sql
-│ ├── int_local_bike_products_summary.sql
-│ ├── int_local_bike_staff_aggregated.sql
-│ └── int_local_bike_store_staff_best_seller.sql
-└── marts/
-├── mrt_daily_customer_purchase_analysis.sql
-├── mrt_daily_product_performance_analysis.sql
-├── mrt_daily_store_staff_sales_analysis.sql
-└── mrt_daily_turnover_analysis.sql
+![Data transformation structure](structure.png)
 
 
 - **Staging Models**: Clean and standardize the raw data (naming conventions, data types, basic joins).
