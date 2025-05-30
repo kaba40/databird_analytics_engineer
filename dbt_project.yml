@@ -44,3 +44,6 @@ models:
     intermediate:
       +materialized: view
       schema: int_local_bike
+    mart:
+      +materialized: table
+      schema: mrt_local_bike
