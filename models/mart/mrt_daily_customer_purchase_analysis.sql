@@ -17,7 +17,7 @@ SELECT
   sum( int_customer.customer_total_order_spent) as customer_total_order_spent,
   sum( int_customer.customer_total_item_ordered) as customer_total_item_ordered,
   sum( int_customer.customer_total_distinct_items) as customer_total_distinct_items
-FROM {{ref("int_local_bike_customers")}} int_customer --1445
+FROM {{ref("int_local_bike_customers_aggregated")}} int_customer --1445
 LEFT JOIN {{ref("stg_customers")}} stg_customer
 ON 1 = 1
   AND int_customer.customer_id = stg_customer.customer_id
