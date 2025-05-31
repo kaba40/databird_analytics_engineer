@@ -12,7 +12,7 @@ select
   staff_agg.total_number_product_sold,
   staff_agg.total_number_customer_served,
   staff_agg.total_number_order_processed
-from {{ref("int_local_bike_staff_aggregated")}} staff_agg
+from {{ref("int_local_bike_store_staff_aggregated")}} staff_agg
 LEFT JOIN {{ref("int_local_bike_store_staff_best_seller")}} best_sold
 ON 1 = 1
   AND staff_agg.store_id = best_sold.store_id
