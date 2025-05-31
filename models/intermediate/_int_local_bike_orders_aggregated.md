@@ -11,8 +11,7 @@ The `int_local_bike_orders_aggregated` model provides an aggregated view of orde
 - Store data  
 - Staff information  
 
-It enriches the order-level data with customer-specific metrics that support deeper customer behavior analysis.
-
+It enriches the order-level data with the folllowing metrics:
 ## Enriched Metrics
 
 - **`Total orders`**: Total number of orders placed by the customer.
