@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_local_bike_orders_aggregated
+    description: '{{ doc("int_local_bike_orders_aggregated") }}'
+    columns:
+      - name: order_id
+        description: "Primary key, unique identifier for each order."
+        tests:
+          - unique
+          - not_null
