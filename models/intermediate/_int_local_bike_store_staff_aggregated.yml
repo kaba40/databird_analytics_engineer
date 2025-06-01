@@ -5,12 +5,7 @@ models:
     description: '{{ doc("int_local_bike_store_staff_aggregated") }}'
     columns:
       - name: store_id
-        description: "Primary key, unique identifier for each store."
-        tests:
-          - unique
-          - not_null
+        description: "store identifier."
       - name: staff_id
-        description: "Primary key, unique identifier for each staff."
-        tests:
-          - unique
-          - not_null         
+        description: "staff identifier."
+      

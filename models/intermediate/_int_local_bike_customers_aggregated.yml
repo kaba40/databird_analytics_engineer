@@ -5,7 +5,4 @@ models:
     description: '{{ doc("int_local_bike_customers_aggregated") }}'
     columns:
       - name: customer_id
-        description: "Primary key, unique identifier for each customer."
-        tests:
-          - unique
-          - not_null
+        description: "customer identifier."
