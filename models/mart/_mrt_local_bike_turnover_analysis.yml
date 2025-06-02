@@ -1,11 +1,11 @@
 version: 2
 
 models:
-  - name: int_local_bike_orders_aggregated
-    description: '{{ doc("int_local_bike_orders_aggregated") }}'
+  - name: mrt_local_bike_turnover_analysis
+    description: '{{ doc("mrt_local_bike_turnover_analysis") }}'
     columns:
-      - name: order_id
-        description: "Primary key, unique identifier for each order."
+      - name: store_id
+        description: "Primary key, unique identifier for each store."
         tests:
           - unique
           - not_null
