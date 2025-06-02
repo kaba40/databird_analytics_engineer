@@ -10,15 +10,15 @@ The project follows the dbt best practices for modular development, version cont
 
 The raw data ingested into the warehouse includes the following sources:
 
-- **Brands**: Customer registration and profile data from the web platform.
-- **Orders**: Transactional order-level data from the e-commerce backend.
-- **Products**: Inventory and product metadata from the internal product catalog.
-- **Categories**: Clickstream data capturing user behavior on the website.
+- **Brands**: The brand of bikes.
+- **Orders**: The orders placed by the customers.
+- **Products**: The references available in catalog.
+- **Categories**: The category of the bikes.
 - **Customers**: Customer registration and profile data from the web platform.
 - **Order Items**: Transactional order-level data from the e-commerce backend.
-- **Staffs**: Inventory and product metadata from the internal product catalog.
-- **Stores**: Clickstream data capturing user behavior on the website.
-- **Stocks**: Customer registration and profile data from the web platform.
+- **Staffs**: The staffs in each store who sale products.
+- **Stores**: Store data.
+- **Stocks**: The quantity available in hand for each product.
 
 
 All data sources are stored in the `raw` schema and are periodically refreshed through ingestion pipelines (e.g., via Fivetran or custom ETL jobs).
